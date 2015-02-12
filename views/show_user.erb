@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>New User Form</title>
+  <link rel="stylesheet" href="/main.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src = "/hello.js"></script>
+</head>
+<body>
+  <h1>Edit User</h1>
+  <form action="/users/<%= @user[:id] %>" method="post">
+  <input type="hidden" name="_method" value="put">
+    First name:<input type="text" name="first_name" value= "<%= @user[:first] %>" >
+    Last name:<input type="text" name="last_name" value= "<%= @user[:last] %>" >
+    <input type="submit" value="update">
+   
+
+  </form>
+<form action="/users/<%= @user[:id] %>" method="post">
+ <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="delete user">
+</form>
+
+</body>
+</html>

@@ -2,19 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Listing all users</title>
+  <title>New User Form</title>
   <link rel="stylesheet" href="/main.css">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src = "/hello.js"></script>
 </head>
 <body>
-  <h1>Here are our users!</h1>
-  <% @users.each do |user| %>
-    <h2><%= user[:first]%></h2><a href="/users/<%= user[:id]%>"> Edit a user</a>
+  <h1>Please sign up!</h1>
+  <form action="/users" method="post">
+    First name:<input type="text" name="first" placeholder= "" >
+    Last name:<input type="text" name="last" >
+    <input type="submit" value="Create user">
 
-  <% end %>
-  <p>
-    <a href="/users/new">Add a user!</a>
-  </p>
+  </form>
+
 </body>
 </html>
